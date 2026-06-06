@@ -1,0 +1,27 @@
+# networking.py
+import time
+import machine, network
+import config
+
+net_ssid = config.net_ssid
+net_pwd = config.net_pwd
+
+def do_connect():
+    try:
+        wlan = network.WLAN()
+        wlan.active(True)
+        if not wlan.isconnected():
+            print('connecting to network...')
+            wlan.connect(net_ssid, net_pwd)
+            while not wlan.isconnected():
+                start =
+                machine.idle()
+        print('network config:', wlan.ipconfig('addr4'))#
+        connection_success = True
+        return connection_success
+    except RuntimeError:
+        print("something went wrong with the network connection..")
+    except Exception as ex:
+        print(f"Anderer Fehler ({type(ex)}): {ex}")
+
+
