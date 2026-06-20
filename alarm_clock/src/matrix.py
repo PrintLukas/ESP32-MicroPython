@@ -13,3 +13,20 @@ def test(txt):
     display.fill(0)
     display.text(txt, 0, 0, 1)
     display.show()                 # nothing appears until you call this
+
+def set_alarm():
+    #displayed_time =
+    pass
+
+def alarm():
+    display.brightness(15)
+    i = 5
+    while i > 0:
+        display.fill(0)
+        display.show()
+        time.sleep(1)
+        display.fill(1)
+        display.show()
+        time.sleep(1)
+        i -= 1
+
