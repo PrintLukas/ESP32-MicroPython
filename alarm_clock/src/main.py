@@ -15,6 +15,7 @@ button_log = []
 
 while True:
     display_time = alarm.time_hm()
+    #display_time = "cafe"
     matrix.test(display_time)
     time.sleep(1)
 
