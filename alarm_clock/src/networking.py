@@ -19,7 +19,7 @@ def do_connect():
             end = start + 5 * 60
 
             while not wlan.isconnected():
-                machine.idle()
+                time.sleep_ms(100)
                 if time.time() >= end:
                     raise Exception ("network connection can't be established")
                     break

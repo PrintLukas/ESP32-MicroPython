@@ -1,7 +1,4 @@
 # config.py
-
-#net_ssid = 'command-station'
-#net_pwd = 'fakhah-3tYnbe-guxgub'
-
-net_ssid = 'EnterpriseFB'
-net_pwd = 'DERkluegereGiBtn.xxx'
+# Wokwi simulation: uses the virtual "Wokwi-GUEST" network (no password)
+net_ssid = 'Wokwi-GUEST'
+net_pwd = ''
