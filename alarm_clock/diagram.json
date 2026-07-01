@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "author": "Lukas Eideloth",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-max7219-matrix",
+      "id": "matrix",
+      "top": 230,
+      "left": -220,
+      "attrs": { "chain": "4" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 80,
+      "left": 260,
+      "attrs": { "color": "green", "label": "BTN1 (GPIO21)" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn2",
+      "top": 160,
+      "left": 260,
+      "attrs": { "color": "blue", "label": "BTN2 (GPIO19)" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn3",
+      "top": 240,
+      "left": 260,
+      "attrs": { "color": "red", "label": "BTN3 (GPIO18)" }
+    }
+  ],
+  "connections": [
+    ["esp:GND.1", "matrix:GND", "black", []],
+    ["esp:3V3",   "matrix:VCC", "red",   []],
+    ["esp:27",    "matrix:DIN", "blue",  []],
+    ["esp:25",    "matrix:CS",  "yellow",[]],
+    ["esp:26",    "matrix:CLK", "green", []],
+
+    ["esp:21",    "btn1:1.l",   "purple",[]],
+    ["esp:GND.2", "btn1:2.l",   "black", []],
+
+    ["esp:19",    "btn2:1.l",   "purple",[]],
+    ["esp:GND.3", "btn2:2.l",   "black", []],
+
+    ["esp:18",    "btn3:1.l",   "purple",[]],
+    ["esp:GND.4", "btn3:2.l",   "black", []]
+  ]
+}

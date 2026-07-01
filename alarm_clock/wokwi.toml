@@ -1,0 +1,37 @@
+[wokwi]
+version = 1
+firmware = "https://micropython.org/resources/firmware/ESP32_GENERIC-20240602-v1.23.0.bin"
+elf = ""
+
+# Upload source files to the ESP32 filesystem
+[[wokwi.file]]
+src = "src/main.py"
+dst = "main.py"
+
+[[wokwi.file]]
+src = "src/alarm.py"
+dst = "alarm.py"
+
+[[wokwi.file]]
+src = "src/matrix.py"
+dst = "matrix.py"
+
+[[wokwi.file]]
+src = "src/max7219.py"
+dst = "max7219.py"
+
+[[wokwi.file]]
+src = "src/networking.py"
+dst = "networking.py"
+
+[[wokwi.file]]
+src = "src/config.py"
+dst = "config.py"
+
+[[wokwi.file]]
+src = "src/button.py"
+dst = "button.py"
+
+[[wokwi.file]]
+src = "src/b1m1.py"
+dst = "b1m1.py"

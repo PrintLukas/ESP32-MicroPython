@@ -6,10 +6,10 @@ BUTTON_PIN_1 = 21  # The ESP32 pin GPIO21 connected to the button
 button1 = Pin(BUTTON_PIN_1, Pin.IN, Pin.PULL_UP)
 
 BUTTON_PIN_2 = 19  # The ESP32 pin GPIO21 connected to the button
-button2 = Pin(BUTTON_PIN_1, Pin.IN, Pin.PULL_UP)
+button2 = Pin(BUTTON_PIN_2, Pin.IN, Pin.PULL_UP)
 
 BUTTON_PIN_3 = 18  # The ESP32 pin GPIO21 connected to the button
-button3 = Pin(BUTTON_PIN_1, Pin.IN, Pin.PULL_UP)
+button3 = Pin(BUTTON_PIN_3, Pin.IN, Pin.PULL_UP)
 
 def button_act(log):
 

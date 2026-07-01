@@ -8,7 +8,8 @@ import button
 import b1m1
 
 networking.do_connect()
-
+print("hello?")
+alarm.sync_time(retries=5)
 # static values
 set_alarm = [14, 40]
 button_log = []

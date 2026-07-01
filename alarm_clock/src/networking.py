@@ -25,7 +25,7 @@ def do_connect():
                     break
 
 
-        print('network config:', wlan.ipconfig('addr4'))#
+        print('network config:', wlan.ipconfig('addr4'))
         connection_success = True
         return connection_success
     except RuntimeError:
