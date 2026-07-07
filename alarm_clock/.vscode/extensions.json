@@ -1,5 +1,6 @@
 {
   "recommendations": [
-    "wokwi.wokwi-vscode"
+    "wokwi.wokwi-vscode",
+    "platformio.platformio-ide"
   ]
 }
