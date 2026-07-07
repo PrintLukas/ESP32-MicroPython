@@ -50,7 +50,9 @@
     [ "esp:19", "btn2:1.l", "purple", [] ],
     [ "esp:GND.1", "btn2:2.l", "black", [] ],
     [ "esp:18", "btn3:1.l", "purple", [] ],
-    [ "esp:GND.1", "btn3:2.l", "black", [] ]
+    [ "esp:GND.1", "btn3:2.l", "black", [] ],
+    [ "esp:TX", "$serialMonitor:RX", "", [] ], 
+    [ "esp:RX", "$serialMonitor:TX", "", [] ] 
   ],
   "dependencies": {}
 }
