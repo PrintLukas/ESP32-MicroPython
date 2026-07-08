@@ -9,6 +9,13 @@ _SCANLIMIT = const(11)
 _SHUTDOWN = const(12)
 _DISPLAYTEST = const(15)
 
+# fix for horizontal mirroring 
+def _rev(b):
+    b = (b & 0xF0) >> 4 | (b & 0x0F) << 4
+    b = (b & 0xCC) >> 2 | (b & 0x33) << 2
+    b = (b & 0xAA) >> 1 | (b & 0x55) << 1
+    return b
+
 class Matrix8x8:
     def __init__(self, spi, cs, num):
         self.spi = spi
@@ -58,5 +65,5 @@ class Matrix8x8:
         for y in range(8):
             self.cs(0)
             for m in range(self.num):
-                self.spi.write(bytearray([_DIGIT0 + y, self.buffer[(y * self.num) + m]]))
+                self.spi.write(bytearray([_DIGIT0 + y, _rev(self.buffer[(y * self.num) + m])]))
             self.cs(1)

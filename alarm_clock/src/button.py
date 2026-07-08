@@ -24,8 +24,31 @@ def button_one(log):
     mode1 = False
     mode2 = False
     mode3 = False
+
     # Read the state of the button
     button_state = button1.value()
+    log.append(button_state)
+
+    # Print the button's state
+    # print(f"button-state: {button_state}")
+    # print(f"button-log: {log}")
+
+    result = button_act(log)
+    print(result)
+    if result == 1:
+        mode1 = True
+
+    return mode1, mode2, mode3
+    # Wait for half a second before reading the button again
+    # time.sleep(1)
+
+def button_two(log):
+    mode1 = False
+    mode2 = False
+    mode3 = False
+
+    # Read the state of the button
+    button_state = button2.value()
     log.append(button_state)
 
     # Print the button's state
@@ -41,5 +64,23 @@ def button_one(log):
     # Wait for half a second before reading the button again
     # time.sleep(1)
 
+def button_three(log):
+    mode1 = False
+    mode2 = False
+    mode3 = False
+    # Read the state of the button
+    button_state = button3.value()
+    log.append(button_state)
 
+    # Print the button's state
+    print(f"button-state: {button_state}")
+    print(f"button-log: {log}")
 
+    result = button_act(log)
+    print(result)
+    if result == 1:
+        mode1 = True
+
+    return mode1, mode2, mode3
+    # Wait for half a second before reading the button again
+    # time.sleep(1)

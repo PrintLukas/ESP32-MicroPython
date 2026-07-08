@@ -14,8 +14,6 @@ def sync_time(retries=3):
             time.sleep(2)
     return False
 
-
-
 def update_time():
     UTC_OFFSET = 2 * 3600  # e.g. UTC+1 → 3600 seconds; UTC-5 → -5 * 3600
     local = time.localtime(time.time() + UTC_OFFSET)

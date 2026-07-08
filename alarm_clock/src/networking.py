@@ -3,13 +3,13 @@ import machine, network
 import config
 import time
 
-net_ssid = config.net_ssid
-net_pwd = config.net_pwd
+net_ssid = 'Wokwi-GUEST'
+net_pwd = ''
 
 
 def do_connect():
     try:
-        wlan = network.WLAN(network.WLAN.IF_STA)
+        wlan = network.WLAN(network.STA_IF) 
         wlan.active(True)
         if not wlan.isconnected():
             print('connecting to network...')
