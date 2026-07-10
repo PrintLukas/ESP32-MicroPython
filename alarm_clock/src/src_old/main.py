@@ -2,10 +2,8 @@ import alarm
 import matrix
 import networking
 import time
-import machine
 #machine.reset()
 import button
-import b1m1
 
 networking.do_connect()
 
