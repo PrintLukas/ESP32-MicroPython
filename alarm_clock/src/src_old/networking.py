@@ -3,13 +3,13 @@ import machine, network
 import config
 import time
 
-net_ssid = 'Wokwi-GUEST'
-net_pwd = ''
+net_ssid = config.net_ssid
+net_pwd = config.net_pwd
 
 
 def do_connect():
     try:
-        wlan = network.WLAN(network.STA_IF) 
+        wlan = network.WLAN(network.WLAN.IF_STA)
         wlan.active(True)
         if not wlan.isconnected():
             print('connecting to network...')
@@ -19,13 +19,13 @@ def do_connect():
             end = start + 5 * 60
 
             while not wlan.isconnected():
-                time.sleep_ms(100)
+                machine.idle()
                 if time.time() >= end:
                     raise Exception ("network connection can't be established")
                     break
 
 
-        print('network config:', wlan.ipconfig('addr4'))
+        print('network config:', wlan.ipconfig('addr4'))#
         connection_success = True
         return connection_success
     except RuntimeError:
